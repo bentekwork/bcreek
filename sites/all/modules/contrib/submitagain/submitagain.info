@@ -1,0 +1,11 @@
+name = Submit Again
+description = Adds an extra button to selected node types *Submit and make another*
+core = 7.x
+files[] = submitagain.module
+
+; Information added by drupal.org packaging script on 2011-02-25
+version = "7.x-1.x-dev"
+core = "7.x"
+project = "submitagain"
+datestamp = "1298620288"
+

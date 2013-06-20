@@ -1,0 +1,429 @@
+<?php
+
+function custom_boulder_menu () {
+	$items = array();
+	$items['golf/online-scorecard'] = array(
+	  'title' => 'Online Scorecard',
+	  'page callback' => 'custom_boulder_scorecard_page',
+	  'access callback' => TRUE,
+	  'type' => MENU_SUGGESTED_ITEM,
+	);
+	$items['golf/online-scorecard/back-nine'] = array(
+	  'title' => 'Online Scorecard',
+	  'page callback' => 'custom_boulder_scorecard_back_page',
+	  'access callback' => TRUE,
+	  'type' => MENU_SUGGESTED_ITEM,
+	);
+	$items['admin/photos/directory-scan'] = array(
+	  'title' => 'Create Photos from a directory',
+	  'page callback' => 'custom_boulder_upload_images_page',
+	  'access arguments' => array('Administer Content'),
+	  'type' => MENU_SUGGESTED_ITEM,
+	);
+	$items['golf/online-tee-time'] = array(
+          'title' => 'Online Tee Time',
+          'page callback' => 'custom_boulder_online_tee_time',
+          'access callback' => TRUE,
+          'type' => MENU_SUGGESTED_ITEM,
+	);
+	return $items;
+}
+
+function custom_boulder_online_tee_time (){
+	return '<div class="ott-iframe"><iframe id="onlinett" src="http://www.teeitup.com/golf/course.wpl?C=49306" width="730px" height= "500px" border="0"></iframe></div>';
+}
+
+function custom_boulder_scorecard_page (){
+	drupal_add_js(drupal_get_path('module', 'custom_boulder').'/js/custom_boulder.js');
+	drupal_add_css(drupal_get_path('module', 'custom_boulder').'/css/custom_boulder.css');
+	$content ='
+			<div id = "interactive" >
+			<div id="preview_wrap">
+				<div class="back_front" style="text-align:right;"><a href="/golf/online-scorecard/back-nine">BACK 9</a></div>
+				<div id="preview_outer">
+					<div id="preview_inner">
+						<div class="scorecard">
+							<img src="/'.drupal_get_path('module', 'custom_boulder').'/images/scorecard/WebScorecardHole1.jpeg" alt="Hole #1" />
+							<span>
+								<img style="float:right" src="/'.drupal_get_path('module', 'custom_boulder').'/images/hole_1.gif" alt="Hole #1" />
+								<table>
+									<tr><td class="td_hole" colspan="2">1</td></tr>
+									<tr class="td_black"><td>Black</td><td>396 yards</td></tr>
+									<tr class="td_blue"><td>Blue</td><td>370 yards</td></tr>
+									<tr class="td_white"><td>White</td><td>352 yards</td></tr>
+									<tr class="td_gold"><td>Gold</td><td>332 yards</td></tr>
+									<tr class="td_red"><td>Red</td><td>300 yards</td></tr>
+								</table>
+								<p class="par">PAR 4</p>
+								<a href="/gallery/hole-1" class="view_pics">VIEW PHOTOS</a>
+							</span>
+						</div>
+						<div class="scorecard">
+							<img src="/'.drupal_get_path('module', 'custom_boulder').'/images/scorecard/WebScorecardHole2.jpeg" alt="Hole #2" />
+							<span>
+								<img style="float:right" src="/'.drupal_get_path('module', 'custom_boulder').'/images/hole_2.gif" alt="Hole #2" />
+								<table>
+									<tr><td class="td_hole" colspan="2">2</td></tr>
+									<tr class="td_black"><td>Black</td><td>354 yards</td></tr>
+									<tr class="td_blue"><td>Blue</td><td>343 yards</td></tr>
+									<tr class="td_white"><td>White</td><td>329 yards</td></tr>
+									<tr class="td_gold"><td>Gold</td><td>301 yards</td></tr>
+									<tr class="td_red"><td>Red</td><td>268 yards</td></tr>
+								</table>
+								<p class="par">PAR 4</p>
+								<a href="/gallery/hole-2" class="view_pics">VIEW PHOTOS</a>
+							</span>
+						</div>
+						<div class="scorecard">
+							<img src="/'.drupal_get_path('module', 'custom_boulder').'/images/scorecard/WebScorecardHole3.jpeg" alt="Hole #3" />
+							<span>
+								<img style="float:right" src="/'.drupal_get_path('module', 'custom_boulder').'/images/hole_3.gif" alt="Hole #3" />
+								<table>
+									<tr><td class="td_hole" colspan="2">3</td></tr>
+									<tr class="td_black"><td>Black</td><td>212 yards</td></tr>
+									<tr class="td_blue"><td>Blue</td><td>204 yards</td></tr>
+									<tr class="td_white"><td>White</td><td>173 yards</td></tr>
+									<tr class="td_gold"><td>Gold</td><td>154 yards</td></tr>
+									<tr class="td_red"><td>Red</td><td>126 yards</td></tr>
+								</table>
+								<p class="par">PAR 3</p>
+								<a href="/gallery/hole-3" class="view_pics">VIEW PHOTOS</a>
+							</span>
+						</div>
+						<div class="scorecard">
+							<img src="/'.drupal_get_path('module', 'custom_boulder').'/images/scorecard/WebScorecardHole4.jpeg" alt="Hole #4" />
+							<span>
+								<img style="float:right" src="/'.drupal_get_path('module', 'custom_boulder').'/images/hole_4.gif" alt="Hole #4" />
+								<table>
+									<tr><td class="td_hole" colspan="2">4</td></tr>
+									<tr class="td_black"><td>Black</td><td>510 yards</td></tr>
+									<tr class="td_blue"><td>Blue</td><td>479 yards</td></tr>
+									<tr class="td_white"><td>White</td><td>465 yards</td></tr>
+									<tr class="td_gold"><td>Gold</td><td>415 yards</td></tr>
+									<tr class="td_red"><td>Red</td><td>384yards</td></tr>
+								</table>
+								<p class="par">PAR 5</p>
+								<a href="/gallery/hole-4" class="view_pics">VIEW PHOTOS</a>
+							</span>
+						</div>
+						<div class="scorecard">
+							<img src="/'.drupal_get_path('module', 'custom_boulder').'/images/scorecard/WebScorecardHole5.jpeg" alt="Hole #5" />
+							<span>
+								<img style="float:right" src="/'.drupal_get_path('module', 'custom_boulder').'/images/hole_5.gif" alt="Hole #5" />
+								<table>
+									<tr><td class="td_hole" colspan="2">5</td></tr>
+									<tr class="td_black"><td>Black</td><td>411 yards</td></tr>
+									<tr class="td_blue"><td>Blue</td><td>388 yards</td></tr>
+									<tr class="td_white"><td>White</td><td>378 yards</td></tr>
+									<tr class="td_gold"><td>Gold</td><td>354 yards</td></tr>
+									<tr class="td_red"><td>Red</td><td>323 yards</td></tr>
+								</table>
+								<p class="par">PAR 4</p>
+								<a href="/gallery/hole-5" class="view_pics">VIEW PHOTOS</a>
+							</span>
+						</div>
+						<div class="scorecard">
+							<img src="/'.drupal_get_path('module', 'custom_boulder').'/images/scorecard/WebScorecardHole6.jpeg" alt="Hole #6" />
+							<span>
+								<img style="float:right" src="/'.drupal_get_path('module', 'custom_boulder').'/images/hole_6.gif" alt="Hole #6" />
+								<table>
+									<tr><td class="td_hole" colspan="2">6</td></tr>
+									<tr class="td_black"><td>Black</td><td>154 yards</td></tr>
+									<tr class="td_blue"><td>Blue</td><td>135 yards</td></tr>
+									<tr class="td_white"><td>White</td><td>118 yards</td></tr>
+									<tr class="td_gold"><td>Gold</td><td>102 yards</td></tr>
+									<tr class="td_red"><td>Red</td><td>100 yards</td></tr>
+								</table>
+								<p class="par">PAR 3</p>
+								<a href="/gallery/hole-6" class="view_pics">VIEW PHOTOS</a>
+							</span>
+						</div>
+						<div class="scorecard">
+							<img src="/'.drupal_get_path('module', 'custom_boulder').'/images/scorecard/WebScorecardHole7.jpeg" alt="Hole #7" />
+							<span>
+								<img style="float:right" src="/'.drupal_get_path('module', 'custom_boulder').'/images/hole_7.gif" alt="Hole #7" />
+								<table>
+									<tr><td class="td_hole" colspan="2">7</td></tr>
+									<tr class="td_black"><td>Black</td><td>591 yards</td></tr>
+									<tr class="td_blue"><td>Blue</td><td>547 yards</td></tr>
+									<tr class="td_white"><td>White</td><td>528 yards</td></tr>
+									<tr class="td_gold"><td>Gold</td><td>514 yards</td></tr>
+									<tr class="td_red"><td>Red</td><td>471 yards</td></tr>
+								</table>
+								<p class="par">PAR 5</p>
+								<a href="/gallery/hole-7" class="view_pics">VIEW PHOTOS</a>
+							</span>
+						</div>
+						<div class="scorecard">
+							<img src="/'.drupal_get_path('module', 'custom_boulder').'/images/scorecard/WebScorecardHole8.jpeg" alt="Hole #8" />
+							<span>
+								<img style="float:right" src="/'.drupal_get_path('module', 'custom_boulder').'/images/hole_8.gif" alt="Hole #8" />
+								<table>
+									<tr><td class="td_hole" colspan="2">8</td></tr>
+									<tr class="td_black"><td>Black</td><td>378 yards</td></tr>
+									<tr class="td_blue"><td>Blue</td><td>353 yards</td></tr>
+									<tr class="td_white"><td>White</td><td>334 yards</td></tr>
+									<tr class="td_gold"><td>Gold</td><td>314 yards</td></tr>
+									<tr class="td_red"><td>Red</td><td>263 yards</td></tr>
+								</table>
+								<p class="par">PAR 4</p>
+								<a href="/gallery/hole-8" class="view_pics">VIEW PHOTOS</a>
+							</span>
+						</div>
+						<div class="scorecard">
+							<img src="/'.drupal_get_path('module', 'custom_boulder').'/images/scorecard/WebScorecardHole9.jpeg" alt="Hole #9" />
+							<span>
+								<img style="float:right" src="/'.drupal_get_path('module', 'custom_boulder').'/images/hole_9.gif" alt="Hole #9" />
+								<table>
+									<tr><td class="td_hole" colspan="2">9</td></tr>
+									<tr class="td_black"><td>Black</td><td>407 yards</td></tr>
+									<tr class="td_blue"><td>Blue</td><td>379 yards</td></tr>
+									<tr class="td_white"><td>White</td><td>358 yards</td></tr>
+									<tr class="td_gold"><td>Gold</td><td>308 yards</td></tr>
+									<tr class="td_red"><td>Red</td><td>277 yards</td></tr>
+								</table>
+								<p class="par">PAR 4</p>
+								<a href="/gallery/hole-9" class="view_pics">VIEW PHOTOS</a>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="thumbs">
+				<div id="arrow"></div>
+				<span><img src="/'.drupal_get_path('module', 'custom_boulder').'/images/hole_1.gif"  /></span>
+				<span><img src="/'.drupal_get_path('module', 'custom_boulder').'/images/hole_2.gif"  /></span>
+				<span><img src="/'.drupal_get_path('module', 'custom_boulder').'/images/hole_3.gif"  /></span>
+				<span><img src="/'.drupal_get_path('module', 'custom_boulder').'/images/hole_4.gif"  /></span>
+				<span><img src="/'.drupal_get_path('module', 'custom_boulder').'/images/hole_5.gif"  /></span>
+				<span><img src="/'.drupal_get_path('module', 'custom_boulder').'/images/hole_6.gif"  /></span>
+				<span><img src="/'.drupal_get_path('module', 'custom_boulder').'/images/hole_7.gif"  /></span>
+				<span><img src="/'.drupal_get_path('module', 'custom_boulder').'/images/hole_8.gif"  /></span>
+				<span><img src="/'.drupal_get_path('module', 'custom_boulder').'/images/hole_9.gif"  /></span>
+
+			</div>
+		</div>
+	';
+	return $content;
+
+}
+
+function custom_boulder_scorecard_back_page (){
+	drupal_add_js(drupal_get_path('module', 'custom_boulder').'/js/custom_boulder.js');
+	drupal_add_css(drupal_get_path('module', 'custom_boulder').'/css/custom_boulder.css');
+	$content ='
+			<div id = "interactive" >
+			<div id="preview_wrap">
+			<div class="back_front" style="text-align:right;"><a href="/golf/online-scorecard">FRONT 9</a></div>
+				<div id="preview_outer">
+					<div id="preview_inner">
+						<div class="scorecard">
+							<img src="/'.drupal_get_path('module', 'custom_boulder').'/images/scorecard/WebScorecardHole10.jpeg" alt="Hole #10" />
+							<span>
+								<img style="float:right" src="/'.drupal_get_path('module', 'custom_boulder').'/images/hole_10.gif" alt="Hole #10" />
+								<table>
+									<tr><td class="td_hole" colspan="2">10</td></tr>
+									<tr class="td_black"><td>Black</td><td>418 yards</td></tr>
+									<tr class="td_blue"><td>Blue</td><td>379 yards</td></tr>
+									<tr class="td_white"><td>White</td><td>355 yards</td></tr>
+									<tr class="td_gold"><td>Gold</td><td>330 yards</td></tr>
+									<tr class="td_red"><td>Red</td><td>299 yards</td></tr>
+								</table>
+								<p class="par">PAR 4</p>
+								<a href="/gallery/hole-10" class="view_pics">VIEW PHOTOS</a>
+							</span>
+						</div>
+						<div class="scorecard">
+							<img src="/'.drupal_get_path('module', 'custom_boulder').'/images/scorecard/WebScorecardHole11.jpeg" alt="Hole #11" />
+							<span>
+								<img style="float:right" src="/'.drupal_get_path('module', 'custom_boulder').'/images/hole_11.gif" alt="Hole #11" />
+								<table>
+									<tr><td class="td_hole" colspan="2">11</td></tr>
+									<tr class="td_black"><td>Black</td><td>597 yards</td></tr>
+									<tr class="td_blue"><td>Blue</td><td>504 yards</td></tr>
+									<tr class="td_white"><td>White</td><td>461 yards</td></tr>
+									<tr class="td_gold"><td>Gold</td><td>440 yards</td></tr>
+									<tr class="td_red"><td>Red</td><td>370 yards</td></tr>
+								</table>
+								<p class="par">PAR 5</p>
+								<a href="/gallery/hole11" class="view_pics">VIEW PHOTOS</a>
+							</span>
+						</div>
+						<div class="scorecard">
+							<img src="/'.drupal_get_path('module', 'custom_boulder').'/images/scorecard/WebScorecardHole12.jpeg" alt="Hole #12" />
+							<span>
+								<img style="float:right" src="/'.drupal_get_path('module', 'custom_boulder').'/images/hole_12.gif" alt="Hole #12" />
+								<table>
+									<tr><td class="td_hole" colspan="2">12</td></tr>
+									<tr class="td_black"><td>Black</td><td>439 yards</td></tr>
+									<tr class="td_blue"><td>Blue</td><td>398 yards</td></tr>
+									<tr class="td_white"><td>White</td><td>378 yards</td></tr>
+									<tr class="td_gold"><td>Gold</td><td>350 yards</td></tr>
+									<tr class="td_red"><td>Red</td><td>316 yards</td></tr>
+								</table>
+								<p class="par">PAR 4</p>
+								<a href="/gallery/hole-12" class="view_pics">VIEW PHOTOS</a>
+							</span>
+						</div>
+						<div class="scorecard">
+							<img src="/'.drupal_get_path('module', 'custom_boulder').'/images/scorecard/WebScorecardHole13.jpeg" alt="Hole #13" />
+							<span>
+								<img style="float:right" src="/'.drupal_get_path('module', 'custom_boulder').'/images/hole_13.gif" alt="Hole #13" />
+								<table>
+									<tr><td class="td_hole" colspan="2">13</td></tr>
+									<tr class="td_black"><td>Black</td><td>183 yards</td></tr>
+									<tr class="td_blue"><td>Blue</td><td>159 yards</td></tr>
+									<tr class="td_white"><td>White</td><td>141 yards</td></tr>
+									<tr class="td_gold"><td>Gold</td><td>117 yards</td></tr>
+									<tr class="td_red"><td>Red</td><td>108 yards</td></tr>
+								</table>
+								<p class="par">PAR 3</p>
+								<a href="/gallery/hole-13" class="view_pics">VIEW PHOTOS</a>
+							</span>
+						</div>
+						<div class="scorecard">
+							<img src="/'.drupal_get_path('module', 'custom_boulder').'/images/scorecard/WebScorecardHole14.jpeg" alt="Hole #14" />
+							<span>
+								<img style="float:right" src="/'.drupal_get_path('module', 'custom_boulder').'/images/hole_14.gif" alt="Hole #14" />
+								<table>
+									<tr><td class="td_hole" colspan="2">14</td></tr>
+									<tr class="td_black"><td>Black</td><td>363 yards</td></tr>
+									<tr class="td_blue"><td>Blue</td><td>344 yards</td></tr>
+									<tr class="td_white"><td>White</td><td>325 yards</td></tr>
+									<tr class="td_gold"><td>Gold</td><td>296 yards</td></tr>
+									<tr class="td_red"><td>Red</td><td>277 yards</td></tr>
+								</table>
+								<p class="par">PAR 4</p>
+								<a href="/gallery/hole-14" class="view_pics">VIEW PHOTOS</a>
+							</span>
+						</div>
+						<div class="scorecard">
+							<img src="/'.drupal_get_path('module', 'custom_boulder').'/images/scorecard/WebScorecardHole15.jpeg" alt="Hole #15" />
+							<span>
+								<img style="float:right" src="/'.drupal_get_path('module', 'custom_boulder').'/images/hole_15.gif" alt="Hole #15" />
+								<table>
+									<tr><td class="td_hole" colspan="2">15</td></tr>
+									<tr class="td_black"><td>Black</td><td>523 yards</td></tr>
+									<tr class="td_blue"><td>Blue</td><td>491 yards</td></tr>
+									<tr class="td_white"><td>White</td><td>469 yards</td></tr>
+									<tr class="td_gold"><td>Gold</td><td>427 yards</td></tr>
+									<tr class="td_red"><td>Red</td><td>385 yards</td></tr>
+								</table>
+								<p class="par">PAR 5</p>
+								<a href="/gallery/hole-15" class="view_pics">VIEW PHOTOS</a>
+							</span>
+						</div>
+						<div class="scorecard">
+							<img src="/'.drupal_get_path('module', 'custom_boulder').'/images/scorecard/WebScorecardHole16.jpeg" alt="Hole #16" />
+							<span>
+								<img style="float:right" src="/'.drupal_get_path('module', 'custom_boulder').'/images/hole_16.gif" alt="Hole #16" />
+								<table>
+									<tr><td class="td_hole" colspan="2">16</td></tr>
+									<tr class="td_black"><td>Black</td><td>221 yards</td></tr>
+									<tr class="td_blue"><td>Blue</td><td>194 yards</td></tr>
+									<tr class="td_white"><td>White</td><td>163 yards</td></tr>
+									<tr class="td_gold"><td>Gold</td><td>148 yards</td></tr>
+									<tr class="td_red"><td>Red</td><td>123 yards</td></tr>
+								</table>
+								<p class="par">PAR 3</p>
+								<a href="/gallery/hole-16" class="view_pics">VIEW PHOTOS</a>
+							</span>
+						</div>
+						<div class="scorecard">
+							<img src="/'.drupal_get_path('module', 'custom_boulder').'/images/scorecard/WebScorecardHole17.jpeg" alt="Hole #17" />
+							<span>
+								<img style="float:right" src="/'.drupal_get_path('module', 'custom_boulder').'/images/hole_17.gif" alt="Hole #17" />
+								<table>
+									<tr><td class="td_hole" colspan="2">17</td></tr>
+									<tr class="td_black"><td>Black</td><td>353 yards</td></tr>
+									<tr class="td_blue"><td>Blue</td><td>328 yards</td></tr>
+									<tr class="td_white"><td>White</td><td>313 yards</td></tr>
+									<tr class="td_gold"><td>Gold</td><td>299 yards</td></tr>
+									<tr class="td_red"><td>Red</td><td>257 yards</td></tr>
+								</table>
+								<p class="par">PAR 4</p>
+								<a href="/gallery/hole-17" class="view_pics">VIEW PHOTOS</a>
+							</span>
+						</div>
+						<div class="scorecard">
+							<img src="/'.drupal_get_path('module', 'custom_boulder').'/images/scorecard/WebScorecardHole18.jpeg" alt="Hole #18" />
+							<span>
+								<img style="float:right" src="/'.drupal_get_path('module', 'custom_boulder').'/images/hole_18.gif" alt="Hole #18" />
+								<table>
+									<tr><td class="td_hole" colspan="2">18</td></tr>
+									<tr class="td_black"><td>Black</td><td>439 yards</td></tr>
+									<tr class="td_blue"><td>Blue</td><td>392 yards</td></tr>
+									<tr class="td_white"><td>White</td><td>367 yards</td></tr>
+									<tr class="td_gold"><td>Gold</td><td>328 yards</td></tr>
+									<tr class="td_red"><td>Red</td><td>302 yards</td></tr>
+								</table>
+								<p class="par">PAR 4</p>
+								<a href="/gallery/hole-18" class="view_pics">VIEW PHOTOS</a>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="thumbs">
+				<div id="arrow"></div>
+				<span><img src="/'.drupal_get_path('module', 'custom_boulder').'/images/hole_10.gif"  /></span>
+				<span><img src="/'.drupal_get_path('module', 'custom_boulder').'/images/hole_11.gif"  /></span>
+				<span><img src="/'.drupal_get_path('module', 'custom_boulder').'/images/hole_12.gif"  /></span>
+				<span><img src="/'.drupal_get_path('module', 'custom_boulder').'/images/hole_13.gif"  /></span>
+				<span><img src="/'.drupal_get_path('module', 'custom_boulder').'/images/hole_14.gif"  /></span>
+				<span><img src="/'.drupal_get_path('module', 'custom_boulder').'/images/hole_15.gif"  /></span>
+				<span><img src="/'.drupal_get_path('module', 'custom_boulder').'/images/hole_16.gif"  /></span>
+				<span><img src="/'.drupal_get_path('module', 'custom_boulder').'/images/hole_17.gif"  /></span>
+				<span><img src="/'.drupal_get_path('module', 'custom_boulder').'/images/hole_18.gif"  /></span>
+				
+			</div>
+		</div>
+	';
+	return $content;
+	
+}
+function custom_boulder_upload_images_page (){
+	return drupal_get_form('custom_boulder_add_images_form');
+}
+function custom_boulder_add_images_form(){
+	$form = array();
+	$form['directory'] = array(
+		'#title' => 'Directory where files are located',
+		'#type' => 'textfield',
+	);
+	$form['hole'] = array(
+	  '#title' => 'Select a hole to attach to all nodes created',
+	  '#type' => 'textfield',
+	);
+	$form['submit'] = array(
+		'#type' => 'submit',
+		'#value' => 'Create Nodes',
+	);
+	return $form;
+}
+function custom_boulder_add_images_form_submit(&$form, $form_state){
+	$dir = $form_state['values']['directory'];
+	$mask = "/.*/";
+	$files = file_scan_directory($dir, $mask, $options = array(), $depth = 0);
+	foreach($files as $file2){
+		$file = new StdClass();
+		$file->uid = 1;
+		$file->uri = $file2->uri;
+		$file->filename = $file2->filename;
+		$file->filemime = file_get_mimetype($file2->uri);
+		$file->status = 1;
+		$dest = file_default_scheme() . '://'.$form_state['values']['hole'].'/'.$file2->filename; // Subdirectory name within files directory. ($dest is optional.)     
+		$file = file_copy($file, $dest);
+		$file->display = 1;
+		$file->description = "";
+
+		$node = new stdClass();
+		$node->type = 'gallery_image';
+		node_object_prepare($node);
+		$node->title = $file2->filename;
+		$node->field_gallery_image['und'][0] = (array)$file;
+		$node->field_image_category['und'][0]['value'] = $form_state['values']['hole'];
+		node_save($node);
+	}
+	
+}

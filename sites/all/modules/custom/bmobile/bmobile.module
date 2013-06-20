@@ -1,0 +1,73 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ */
+function bmobile_menu() {
+
+  $items['node/%node/json'] = array(
+    'title' => 'json',
+    'page callback' => 'bmobile_node_json',
+		'page arguments' => array(1),
+    'access arguments' => array('access content'),
+    'type' => MENU_CALLBACK,
+  );
+
+  $items['holes/json'] = array(
+    'title' => 'holes',
+    'page callback' => 'bmobile_holes_json',
+    'access arguments' => array('access content'),
+    'type' => MENU_CALLBACK,
+  );
+
+	$items['holes/images/json'] = array(
+    'title' => 'holes images',
+    'page callback' => 'bmobile_holes_images_json',
+    'access arguments' => array('access content'),
+    'type' => MENU_CALLBACK,
+  );
+
+  return $items;
+}
+
+function bmobile_node_json($node){
+	$GLOBALS['conf']['cache'] = FALSE;
+	drupal_add_http_header('Access-Control-Allow-Origin', '*');
+	$elements = node_view($node, 'full');
+	$rendered_node = drupal_render($elements);
+	$array = array('title' => $node->title, 'content' => $elements['#children']);
+	return drupal_json_output($array);
+}
+
+function bmobile_holes_json () {
+	$GLOBALS['conf']['cache'] = FALSE;
+	drupal_add_http_header('Access-Control-Allow-Origin', '*');
+	$holes = array();
+	if(isset($_GET['hole'])){
+		$holes = db_query('SELECT * FROM holes WHERE id = :id', array(':id' => $_GET['hole']))->fetch();
+	} else {
+		$holes = db_query('SELECT * FROM holes')->fetchAll();
+	}
+	return drupal_json_output($holes);
+}
+
+function bmobile_holes_images_json(){
+	$GLOBALS['conf']['cache'] = FALSE;
+	drupal_add_http_header('Access-Control-Allow-Origin', '*');
+	 $images = array();
+	 if(isset($_GET['hole'])){
+		 $view = views_get_view('gallery_restaurant');
+		 if (is_object($view)) {
+		    $view->set_arguments(array('hole-'.$_GET['hole']));
+				$view->set_display('page');
+		    $view->pre_execute();
+		    $view->execute();
+				foreach($view->result as $result){
+					$thumbnail = image_style_url('thumbnail', $result->field_field_gallery_image[0]['raw']['uri']);
+					$original  = file_create_url($result->field_field_gallery_image[0]['raw']['uri']);
+					$images[] = array('original' => $original, 'thumbnail' => $thumbnail);
+				}
+			}
+		}
+		return drupal_json_output($images);
+}

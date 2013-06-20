@@ -1,0 +1,1204 @@
+
+/****************************/
+/* LOCAL CSS                */
+/****************************/
+
+/* Put your custom CSS and CSS overrides in this file and  */
+/* rename it local.css.  By restricting your CSS changes   */
+/* to local.css, your changes will not be overwritten when */
+/* upgrading to a new version of this theme.  You can also */
+/* use a local-rtl.css file for the equivalent in RTL.     */
+
+/* Steps to activate local.css:                       */
+/* 1. Add your custom CSS to this file                */
+/* 2. Rename this file to local.css                   */
+/* 3. Clear cached data at admin/settings/performance */
+
+
+/* ----------------------------------------------------------------------------------------------------------- */
+/* --- GLOBAL CSS STYLES --- */
+
+html , body , div , span , applet , object , iframe , p , blockquote , pre ,
+a , abbr , acronym, address , big , cite , code ,
+del , dfn , em, font , img , ins , kbd , q , s , samp ,
+small , strike , strong , sub , sup , tt , var ,
+b , u , i , center ,
+d l , dt , dd , ol , ul , li ,
+fieldset , form, label , legend ,
+table , caption , tbody , tfoot , thead , tr , th , td {
+    margin : 0 ;
+    padding : 0;
+    border : 0 ;
+    outline : 0 ;
+    font-size : 100%;
+    vertical-align : baseline ;
+    color: #535455;
+}
+
+h1 , h2 , h3 , h4 , h5 , h6 {
+	color: #e6c2a1;
+    font-weight: bold;
+    letter-spacing: -0.05em;
+}
+
+.node .field-name-body h2, .node .field-name-body h3, .node .field-name-body h4, .node .field-name-body h5, .node .field-name-body h6 {
+	color: #000000;	
+}
+
+.node .field-name-body h2 strong, .node .field-name-body h3 strong, .node .field-name-body h4 strong, .node .field-name-body h5 strong, .node .field-name-body h6 strong {
+	color: #000000;	
+}
+
+.node .field-name-body h2 strong span, .node .field-name-body h3 strong span, .node .field-name-body h4 strong span, .node .field-name-body h5 strong span, .node .field-name-body h6 strong span {
+	color: #000000;	
+}
+
+h1 { 
+	font-size : 225%;
+}
+
+h1.title {
+	text-transform: uppercase;
+	font-weight: normal;
+	font-size : 250%;
+    padding-bottom: 20px;
+    margin: 10px 0 0 9px;
+	background: url("../images/h1titleshadow.png") no-repeat scroll 0 bottom transparent;
+}
+
+
+h2 { 
+	font-size : 185%;
+}
+
+h3 { 
+	font-size : 140%; 
+}
+
+h4 {
+	font-size: 120%;
+}
+
+h5 {
+	font-size: 110%;
+}
+
+h6 {
+	font-size: 100%;
+}
+
+
+
+p + p {
+	margin-top: 0.5em;
+} 
+
+body {
+    line-height : 1.4;
+}
+
+.node .content .field-name-field-event-type, .node .content .field-name-field-event-date {
+	padding-top: 20px;
+}
+
+a {
+	font-weight: bold;
+	color: #006ec5;
+}
+
+a, a:link, a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	color: #007ada;
+}
+
+a[href^=tel] { 
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+#edit-submit {
+	background-color: #006ec5;
+	color:#fff;
+	border: none;
+	border-radius: 2px;
+    padding: 3px 6px 2px;
+    box-shadow: 0 2px 5px #D1D1D1;
+	text-shadow: 0 1px 1px #01335A;
+    border: 1px solid  #006ec5;
+}
+
+#edit-submit:hover {
+	background-color: #007ada;
+    border: 1px solid #01335A;
+}
+
+#content {
+	min-height: 400px;
+    width: 620px;
+}
+
+blockquote {
+	background: url("../images/blockquote.png") no-repeat scroll left 0 transparent;
+	padding: 0 45px;
+}
+
+/* ----------------------------------------------------------------------------------------------------------- */
+/* --- BODY, HEADER, MENU, MAIN, FOOTER, & WRAPPERS --- */
+
+
+/* --- BODY & WRAPPER--- */
+
+body {
+	background: url("../images/bgrdwrapper.jpg") no-repeat fixed center 0 #000000;
+}
+
+
+/* --- HEADER ---------------------------------------------------------- */
+
+#header-site-info {
+    float: left;
+    width: 135px;
+}
+
+#block-block-6 {
+	height: 80px;
+}
+
+#block-block-6 p {
+	font-size: 110%;
+	color: #e6c2a1;
+    letter-spacing: 0.05em;
+	line-height: 80px;
+    text-shadow: 0 1px 5px #000000;
+}
+
+#block-block-7 {
+    height: 30px;
+    padding-right: 12px;
+	padding-top: 5px;	
+}
+
+#block-block-7 img {
+	float: left;
+}
+
+#block-block-7 a {
+	line-height: 30px;
+	float: left;
+    text-shadow: 0 1px 5px #000000;	
+	color: #ffffff;
+}
+
+#block-block-7 a:hover {
+	color: #007ada;
+    text-shadow: 0 1px 2px #ffffff;	
+}
+
+#block-block-7 p {
+	float: right;
+	padding-right: 16px;
+	clear: both;
+	color: #ffffff;
+}
+
+#block-block-7 h4 {
+	float: right;
+	padding-right: 16px;
+	clear: both;
+	color: #ffffff;
+	font-weight: normal;
+    text-shadow: 0 1px 1px #000000;	
+}
+
+
+/* ---MENU----------------------------------------------------------- */
+
+
+#main-menu-inner {
+    background: url("../images/menubgrd.png") no-repeat scroll 0 0 transparent;
+    border-radius: 2px 2px 2px 2px;
+    height: 25px;
+    margin-left: 33px;
+    width: 890px;
+}
+
+#block-superfish-1 .content ul a {
+	text-transform: uppercase;
+	color: #000000;
+}
+
+#block-superfish-1 .content ul a.active {
+	color: #006ec5;
+}
+
+#block-superfish-1 .content ul a:hover {
+	color: #007ada;
+}
+
+#block-superfish-1 {
+	width: 710px;
+	margin-bottom: 0;
+}
+
+#block-superfish-1 .content ul li {
+	line-height: 23px;
+}
+
+#block-superfish-1 .content ul li.last {
+	border-right: none;
+}
+
+#block-superfish-1 .content ul li a {
+	padding: 0 2.7em;
+	margin-top: 2px;
+}
+
+#block-superfish-1 .content ul li.first a {
+	padding-left: 3em;
+}
+
+#block-superfish-1 .content ul li ul li a.sf-depth-2 {
+    padding-left: 42px;
+}
+
+#block-superfish-1 .content ul li.first ul li a.sf-depth-2 {
+    padding-left: 40px;
+}
+
+/* ---MENU - Level 2 Dropdown ----------------------------------------------------------- */
+
+#superfish-1 ul {
+	background-color: #004f8b;
+	border-radius: 0 0 6px 6px;
+	opacity: .95;
+	filter: alpha(opacity = 95);
+	top: 25px;
+	padding-top: 20px;
+}
+
+#superfish-1 ul li {
+	background: url("../images/ddown.png") no-repeat scroll 0 0 transparent;
+    padding: 3px 0;
+}
+
+#block-superfish-1 .content ul li ul li {
+    border-right: none;
+    line-height: 20px;
+}
+
+#block-superfish-1 .content ul li ul li a {
+	color: #ffffff;
+	font-size: 85%;
+	text-shadow: 0 1px 0 #000000;
+	
+}
+
+/* ---MENU - Facebook Link ----------------------------------------------------------- */
+
+#block-block-1 {
+    float: left;
+    height: 25px;
+    position: relative;
+    top: -11px;
+	margin-bottom: 0;
+}
+
+#block-block-1 img {
+    position: relative;
+    top: 6px;
+}
+
+#block-block-1 p {
+    line-height: 25px;
+    margin-top: 1px;
+}
+
+#block-block-1 a:hover {
+	text-decoration: underline;
+}
+
+/* --- FOOTER ----------------------------------------------------------- */
+
+#footer {
+	height: 100px;
+}
+
+#footer-inner {
+    background: url("../images/footerbgrd.png") no-repeat scroll 0 0 transparent;
+    border-radius: 2px 2px 2px 2px;
+    height: 25px;
+    margin-left: 33px;
+    width: 890px;
+}
+
+#footer-inner p {
+	color: #ffffff;
+	font-weight: bold;
+}
+
+#block-block-2 {
+    float: left;
+    height: 25px;
+}
+
+#block-block-2 p {
+    line-height: 25px;
+}
+
+#block-block-3 {
+    float: left;
+    height: 25px;
+    margin-left: 50px;
+    position: relative;
+    top: -18px;
+}
+
+#block-block-3 img {
+    position: relative;
+    top: 10px;
+}
+
+#block-block-3 a {
+	color: #ffffff;
+}
+
+#block-block-3 a:hover {
+	text-decoration: underline;
+}
+
+#block-block-3 p {
+    line-height: 25px;
+}
+
+/* --- GOLF LANDING PAGE ----------------------------------------------------------- */
+
+#pid-restaurant #landing-panel, #pid-banquets-weddings #landing-panel, #pid-restaurant .main, #pid-banquets-weddings .main  {
+	padding: 0;
+}
+
+#pid-golf .content-group, #pid-restaurant .content-group, #pid-banquets-weddings .content-group  {
+	background: none;
+}
+
+#pid-golf #content-group, #pid-restaurant #content-group, #pid-banquets-weddings #content-group, #pid-golf #content-group-inner, #pid-restaurant #content-group-inner, #pid-banquets-weddings #content-group-inner {
+	padding: 0;
+}
+
+#pid-restaurant #block-system-main .gutter.inner, #pid-banquets-weddings #block-system-main .gutter.inner {
+	margin-left: 0;
+}
+
+.landing-block, .rest-landing-block, .host-landing-block {
+    background: url("../images/homeblockbgrdlite.png") repeat-y scroll 0 0 transparent;
+    margin-bottom: 50px;
+    padding: 30px;
+	width: 360px;
+	min-height: 150px;
+}
+
+.landing-block h2, .landing-block h3, .landing-block h4, .landing-block h4, .landing-block h5, .landing-block h6 {
+	color: #ffffff;
+	text-shadow: 0 2px 5px #000000;
+    letter-spacing: 0.05em;
+	font-weight: normal;
+	margin: 0;
+    line-height: 1.2em;
+}
+
+.landing-block p {
+	color: #e0e0e0;
+	text-shadow: 0 1px 2px #000000;
+}
+
+.landing-block .content {
+	width: 300px;
+}
+
+.weather {
+	opacity: .9;
+	filter: alpha(opacity = 90);
+}
+
+#pid-golf .weather {
+	width: 220px;
+}
+
+.weather img {
+	border: 5px solid #ffffff;
+	border-radius: 2px;
+	float: left;
+	margin-right: 10px;
+}
+.weather ul {
+	float:left;
+	margin: 0;
+    width: 120px;
+}
+
+#block-weather-system_1 .gutter.inner {
+	margin: 0;
+}
+
+#pid-golf .weather ul {
+    width: 136px;
+}
+
+.weather p, .weather span {
+	color: #ffffff;
+}
+
+.weather h2 {
+	font-size: 280%;
+	font-style: italic;
+	font-weight: normal;
+	margin-bottom: 0;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.weather li {
+	text-transform: uppercase;
+	line-height: 13px;
+}
+
+.g-left, .g-middle {
+	border-right: 1px dashed #ffffff;
+    min-height: 100px;
+}
+
+.weather li {
+	list-style-type: none;
+	color: #ffffff;
+}
+
+.g-middle p, .g-middle h1, .g-middle h2, .g-middle  h3, .g-middle h4, .g-middle h5, .g-middle h6, .g-middle address {
+	color: #ffffff;
+	font-weight: normal;
+	letter-spacing: 0;
+    margin-bottom: 0;
+}
+
+.g-middle h3 {
+	text-shadow: 0 1px 1px #000000;
+}
+
+.g-middle a.blue-btn, .h-left a.blue-btn {
+	font-size: 80%;
+    line-height: 30px;
+    padding: 6px 10px 5px 10px;
+	color: #ffffff;
+	background: #4aa1e2; /* Old browsers */
+	background: -moz-linear-gradient(top,  #4aa1e2 0%, #03538e 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4aa1e2), color-stop(100%,#03538e)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #4aa1e2 0%,#03538e 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #4aa1e2 0%,#03538e 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #4aa1e2 0%,#03538e 100%); /* IE10+ */
+	background: linear-gradient(top,  #4aa1e2 0%,#03538e 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4aa1e2', endColorstr='#03538e',GradientType=0 ); /* IE6-9 */
+    border: 1px solid #4ca4e5;
+	border-radius: 6px;
+    box-shadow: 0 6px 12px #000000;
+}
+
+.g-middle a.blue-btn:hover, .h-left a.blue-btn:hover  {
+	background: #006ec5;
+    border: 1px solid #4aa1e2;
+}
+
+.g-right {
+    min-height: 100px;
+}
+
+.g-right img {
+	float: left;
+	padding-right: 10px;
+	background: #ffffff;
+	padding: 2px 5px;
+	border: 1px solid #f9f9f9;
+	box-shadow: 0 2px 3px #000000;
+}
+
+.g-right a.green-btn {
+	font-size: 80%;
+	color: #ffffff;
+	background: #7ce04a; /* Old browsers */
+	background: -moz-linear-gradient(top,  #7ce04a 0%, #04873f 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7ce04a), color-stop(100%,#04873f)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #7ce04a 0%,#04873f 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #7ce04a 0%,#04873f 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #7ce04a 0%,#04873f 100%); /* IE10+ */
+	background: linear-gradient(top,  #7ce04a 0%,#04873f 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7ce04a', endColorstr='#04873f',GradientType=0 ); /* IE6-9 */
+    padding: 6px 10px 5px 10px;
+    border: 1px solid #7CE04A;
+	border-radius: 6px;
+    box-shadow: 0 6px 12px #000000;
+	margin-top: 5px;
+	margin-left: 1px;
+	float: left;
+	clear: both;
+}
+
+.g-right a.green-btn:hover {
+	background: #04873f;
+}
+
+.g-right  .panels-flexible-region-inside {
+    padding-left: 30px;
+}
+
+
+/* --- RESTAURANT LANDING PAGE ---------------------------------------------------------- */
+
+#pid-restaurant .more-link a {
+    box-shadow: 0 2px 4px #232323;
+}
+
+#pid-restaurant .more-link {
+    margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.rest-landing-block p {
+	color: #ffffff;
+	text-shadow: 1px 1px #000000;
+}
+
+.rest-landing-block .views-field-title a {
+	font-size: 160%;
+	color: #ffffff;
+}
+
+#pid-restaurant .breadcrumb {
+	display:none;
+}
+
+.r-left p, .r-left address, .r-left p strong {
+	color: #ffffff;
+	text-shadow: 1px 1px #000000;
+    line-height: 25px;
+}
+
+.rest-landing-block h2, .host-landing-block h2 {
+	text-shadow: 0 2px 2px #000000;
+	letter-spacing: 0.05em;
+	font-weight: normal;
+}
+
+/* --- BANQUET / WEDDINGS LANDING PAGE ------------------------------------------------------------ */
+
+.host-landing-block p {
+	color: #ffffff;
+	text-shadow: 1px 1px #000000;
+	clear: both;
+}
+
+.host-landing-block h2 {
+	float: left;
+	font-weight: normal;
+	margin-bottom: 0;
+}
+
+.host-landing-block h4 {
+	color: #ffffff;
+	text-shadow: 1px 1px #000000;
+	float: left;
+	clear: right;
+	line-height: 35px;
+	margin-bottom: 0;
+}
+
+#pid-banquets-weddings .breadcrumb {
+	display:none;
+}
+
+.h-left address, .h-left p strong, .h-left h3 {
+	color: #ffffff;
+	text-shadow: 1px 1px #000000;
+    line-height: 25px;
+	font-weight: normal;
+	letter-spacing: 0;
+}
+
+.h-left p {
+	color: #ffffff;
+}
+
+/* --- MAIN / CONTENT ----------------------------------------------------------- */
+
+.breadcrumb a {
+	font-size: 90%;
+}
+
+.breadcrumbs h2.element-invisible {
+	font-size: 90%;
+}
+
+.breadcrumb h2 {
+	font-size: 90%;
+}
+
+div.content-messages-inner div.status {
+    width: 550px;
+}
+
+#content-group-inner {
+	padding: 20px 20px;
+
+}
+
+.content-group {
+    background: url("../images/innerbody.png") repeat-y scroll 0 0 transparent;
+    border-radius: 2px 2px 2px 2px;
+    margin-right: 10px;
+    width: 660px;
+	overflow: hidden;
+}
+
+.main-content-inner {
+    padding: 0 33px 20px;
+}
+
+.main {
+	padding-top: 20px;
+}
+
+/* --- SIDEBAR BLOCKS ---------------------------------------------------------- */
+
+.sidebar {
+    width: 220px;
+}
+
+#block-block-5 {
+    background: url("../images/sibebarblockbgrd.png") repeat-y scroll 0 0 transparent;
+    border-radius: 2px 2px 2px 2px;
+    min-height: 100px;
+    padding: 20px 0 0;
+    width: 220px;
+}
+
+#block-block-5  p {
+	color: #ffffff;
+	font-weight: normal;
+	letter-spacing: 0;
+    margin-bottom: 0;
+}
+
+#block-block-5 h3 {
+	color: #ffffff;
+}
+
+#block-block-5  a.blue-btn  {
+	font-size: 80%;
+	color: #ffffff;
+	background: #4aa1e2; /* Old browsers */
+	background: -moz-linear-gradient(top,  #4aa1e2 0%, #03538e 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4aa1e2), color-stop(100%,#03538e)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #4aa1e2 0%,#03538e 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #4aa1e2 0%,#03538e 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #4aa1e2 0%,#03538e 100%); /* IE10+ */
+	background: linear-gradient(top,  #4aa1e2 0%,#03538e 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4aa1e2', endColorstr='#03538e',GradientType=0 ); /* IE6-9 */
+    padding: 6px 10px 5px 10px;
+	line-height: 30px;
+    border: 1px solid #4ca4e5;
+	border-radius: 6px;
+    box-shadow: 0 6px 12px #000000;
+}
+
+#block-block-5 a.blue-btn:hover {
+	background: #006ec5;
+    border: 1px solid #4aa1e2;
+}
+
+/* --- SIDEBAR SUBMENU ---------------------------------------------------------- */
+
+#block-menu_block-1 .gutter.inner {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+#block-menu_block-1 {
+    overflow: visible;
+    width: 220px;
+}
+
+#block-menu_block-1 h2.block-title {
+	color: #ffffff;
+	background-color: #006ec5;
+	border-top: 1px solid #72a0c7;
+	line-height: 22px;
+	font-size: 90%;
+	padding-left: 20px;
+	margin-bottom: 0;
+	padding-top: 3px;
+}
+
+.menu-block-1 {
+	background-color: #f1f6fa;
+    opacity: 0.95;	
+	filter: alpha(opacity = 95);
+}
+
+.menu-block-1 ul.menu {
+	padding: 10px 0 25px 0;
+	margin-left: 0;
+}
+
+.menu-block-1 li {
+	padding: 5px;
+    overflow: visible;
+}
+
+.menu-block-1 ul.menu li.leaf {
+    line-height: 24px;
+    list-style-image: none;
+    list-style-type: none;
+    margin: 0 0 0 -20px;
+    padding: 0 0 0 20px;
+}
+
+.menu-block-1 ul.menu li a {
+	color: #989898;
+	text-shadow: 0 1px #ffffff;
+	display: block;
+	padding-left: 10px;
+	margin-left: 15px;
+	text-transform: uppercase;
+	font-size: 90%;
+	border-bottom: 1px solid #f1f6fa;
+}
+
+.menu-block-1 ul.menu li a.active {
+	background-color: #ffffff;
+}
+
+.menu-block-1 ul.menu li a.active, .menu-block-1 ul.menu li:hover a.active {
+	color: #006ec5;
+	border-bottom: 1px solid #e9eff4;
+}
+
+.menu-block-1 ul.menu li:hover a {
+	color: #000000;
+}
+
+.menu-block-1 li.active {
+    background: url("../images/subnavbullet.png") no-repeat scroll 0 0 transparent;
+}
+
+/* --- UPCOMING EVENTS ---------------------------------------------------------- */
+
+#pid-upcoming-events .content-region-inner, #pid-upcoming-events-week .content-region-inner, #pid-upcoming-events-day .content-region-inner, #pid-upcoming-events-year .content-region-inner {
+	width: 870px;
+}
+
+
+#pid-upcoming-events .content-group, #pid-upcoming-events-week .content-group, #pid-upcoming-events-day .content-group, #pid-upcoming-events-year .content-group {
+    background: url("../images/innerbody-cal.png") repeat-y scroll 0 0 transparent;
+    border-radius: 2px 2px 2px 2px;
+    margin: 0 10px 20px 33px;
+}
+
+#pid-upcoming-events .view-upcoming-events-calendar, #pid-upcoming-events-week .view-upcoming-events-calendar, #pid-upcoming-events-day .view-upcoming-events-calendar, #pid-upcoming-events-year .view-upcoming-events-calendar {
+	width: 870px; 
+}
+
+#pid-upcoming-events .breadcrumb, #pid-upcoming-events-week .breadcrumb, #pid-upcoming-events-day .breadcrumb, #pid-upcoming-events-year .breadcrumb {
+	display: none;
+}
+
+ul.tabs {
+	margin-left: 0;
+}
+
+.upcoming-events ul.pager {
+	padding: 0;
+	margin-bottom: 0;
+}
+
+.view .date-nav-wrapper .date-prev {
+    left: 0;
+	right: auto;
+}
+
+.upcoming-events ul.pager li.date-prev, .upcoming-events ul.pager li.date-next {
+	background: none;
+}
+
+.upcoming-events .date-nav {
+	padding-bottom: 0;
+}
+
+.upcoming-events .date-heading h3 {
+	color: #535455;
+	text-shadow: 0 1px 1px #ffffff;
+}
+
+#block-views-e60855005ea5964f726ca212913eaab8 h2.block-title, #block-views-restauraunt_special_view-block h2.block-title {
+	color: #ffffff;
+	background-color: #999fa4;
+	border-top: 1px solid #bac1c6;
+	line-height: 22px;
+	font-size: 90%;
+	padding-left: 20px;
+	margin-bottom: 0;
+	padding-top: 3px;
+}
+
+#block-views-e60855005ea5964f726ca212913eaab8 .gutter.inner, #block-views-restauraunt_special_view-block .gutter.inner {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.upcoming-events.view-display-id-block_2, .view-restauraunt-special-view.view-display-id-block {
+	background-color: #f1f6fa;
+    padding-bottom: 16px;
+    opacity: 0.95;
+	filter: alpha(opacity = 95);
+}
+
+#block-views-e60855005ea5964f726ca212913eaab8, #block-views-restauraunt_special_view-block {
+    width: 220px;
+}
+
+.view-restauraunt-special-view.view-display-id-block {
+	padding: 10px 20px 16px 20px;
+}
+
+.upcoming-events ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 10px 20px 10px 20px;
+}
+
+.upcoming-events ul li a:hover {
+	text-decoration: underline;
+}
+
+.upcoming-events ul li a.active:hover {
+	text-decoration: none;
+}
+
+.upcoming-events .views-field-field-event-date, .view-restauraunt-special-view.view-display-id-block .views-field-body {
+    border-bottom: 1px solid #D1D1D1;
+    font-size: 11px;
+    line-height: 12px;
+    padding-bottom: 6px;
+}
+
+.view-restauraunt-special-view.view-display-id-block .views-field-field-weekday {
+	font-size: 11px;
+    line-height: 12px;
+	padding: 3px 0;
+}
+
+
+.upcoming-events  .views-field-title, .view-restauraunt-special-view.view-display-id-block .views-field-title {
+	border-top: 1px solid #f1f1f1;
+    padding-top: 6px;
+}
+
+.upcoming-events .views-row-last .views-field-field-event-date, .view-restauraunt-special-view.view-display-id-block .views-row-last .views-field-body {
+	border-bottom: none;
+}
+
+.upcoming-events .views-row-first .views-field-title, .view-restauraunt-special-view.view-display-id-block .views-row-first .views-field-title {
+	padding-top: 0;
+}
+
+.more-link {
+	margin-right: 20px;
+}
+
+.view-restauraunt-special-view.view-display-id-block .more-link {
+	margin-right: 0;
+    margin-top: 10px;
+}
+
+.more-link a  {
+	color: #ffffff;
+	background: #4aa1e2; /* Old browsers */
+	background: -moz-linear-gradient(top,  #4aa1e2 0%, #03538e 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4aa1e2), color-stop(100%,#03538e)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #4aa1e2 0%,#03538e 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #4aa1e2 0%,#03538e 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #4aa1e2 0%,#03538e 100%); /* IE10+ */
+	background: linear-gradient(top,  #4aa1e2 0%,#03538e 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4aa1e2', endColorstr='#03538e',GradientType=0 ); /* IE6-9 */
+    border: 1px solid #4CA4E5;
+    border-radius: 2px 2px 2px 2px;
+    color: #FFFFFF;
+    font-size: 60%;
+    padding: 2px 8px;
+    box-shadow: 0 2px 4px #d1d1d1;
+}
+
+.more-link a:hover  {
+	background: #006ec5;
+    border: 1px solid #4aa1e2;
+}
+
+.calendar-calendar .month-view .full td.single-day div.monthview, .calendar-calendar .week-view .full td.single-day div.weekview, .calendar-calendar .day-view .full td.single-day div.dayview {
+    padding: 3px;
+}
+
+.calendar a {
+	float: left;
+	clear: both;
+    width: 100%;
+}
+
+.calendar  span.date-display-single {
+    clear: both;
+    float: left;
+}
+
+.calendar-calendar td.has-events {
+    background: none repeat scroll 0 0 #FFFFCC;
+}
+
+#pid-golf-upcoming-events #content-region-inner, #pid-golf-upcoming-events-year #content-region-inner, #pid-golf-upcoming-events-month #content-region-inner, #pid-golf-upcoming-events-week #content-region-inner, #pid-golf-upcoming-events-day #content-region-inner {
+    background: none repeat scroll 0 0 #FFFFFF;
+	border-radius: 6px;
+	box-shadow: 0 2px 3px #d1d1d1; 
+	padding-top: 20px;
+}
+
+#pid-golf-upcoming-events #content-tabs li a.active, #pid-golf-upcoming-events-week #content-tabs li a.active, #pid-golf-upcoming-events-year #content-tabs li a.active, #pid-golf-upcoming-events-day #content-tabs li a.active {
+    background: none repeat scroll 0 0 #006EC5;
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 0 1px 4px #01335A inset;
+    color: #FFFFFF;
+}
+
+#pid-golf-upcoming-events #content-tabs li a, #pid-golf-upcoming-events-week #content-tabs li a, #pid-golf-upcoming-events-year #content-tabs li a, #pid-golf-upcoming-events-day #content-tabs li a {
+    background: none repeat scroll 0 0 #CCCCCC;
+    border-radius: 4px 4px 4px 4px;
+    color: #ffffff;
+	border: none;
+	font-size: 90%;
+	font-weight: normal;
+	text-transform: uppercase;
+	padding: 2px 10px 1px 10px;
+	margin-bottom: 10px;
+	
+}
+
+#pid-golf-upcoming-events #content-tabs li a:hover, #pid-golf-upcoming-events-week #content-tabs li a:hover, #pid-golf-upcoming-events-year #content-tabs li a:hover, #pid-golf-upcoming-events-day #content-tabs li a:hover {
+    background: none repeat scroll 0 0 #232323;
+}
+
+#pid-golf-upcoming-events #content-tabs li a.active:hover, #pid-golf-upcoming-events-week #content-tabs li a.active:hover, #pid-golf-upcoming-events-year #content-tabs li a.active:hover, #pid-golf-upcoming-events-day #content-tabs li a.active:hover {
+    background: none repeat scroll 0 0 #006EC5;
+}
+
+#pid-golf-upcoming-events ul.primary {
+	height: 22px;
+}
+
+
+/* --- SPECIALS LIST VIEW --------------------------------------------------------- */
+
+.specials-list-view .views-row {
+	padding: 30px 0;
+	border-bottom: 1px dashed #cccccc;
+}
+
+.specials-list-view .views-row.views-row-last {
+	border-bottom: none;
+}
+
+.specials-list-view .views-field-title {
+	font-size: 200%;
+}
+
+.specials-list-view .views-field-title span {
+	color: #000000;
+}
+
+.specials-list-view .views-field-field-weekday {
+
+}
+
+.view-restauraunt-specials-list-view .views-field-body img {
+	background: #ffffff;
+	padding: 5px;
+	border: 1px solid #f9f9f9;
+	box-shadow: 0 2px 3px #d1d1d1;
+}
+
+.node .field-name-field-weekday {
+	padding-top: 20px;
+}
+
+/* --- GOLF, RESTAURANT, HOST YOUR EVENTS GALLERY PAGE ---------------------------------------- */
+
+#cboxWrapper {
+    background: none repeat scroll 0 0 #000000;
+    border-radius: 0;
+}
+
+#cboxContent {
+	background: #000000;
+}
+
+#cboxNext, #cboxPrevious, #cboxClose {
+	    border-radius: 12px 12px 12px 12px;
+}
+
+.gallery-view .views-field-field-gallery-image {
+    box-shadow: 0 3px 20px #232323;
+	width: 118px;
+	height: 90px;
+	float: left;
+}
+
+.gallery-view img:hover  {
+	background: #d1d1d1;
+}
+
+.gallery-view img {
+	float: left;
+	background: #ffffff;
+	padding: 5px;
+	border: 1px solid #f9f9f9;
+}
+
+.gallery-view  ul.pager {
+    clear: both;
+    margin: 0;
+    padding: 20px 0 20px;
+    width: 602px;
+}
+
+.gallery-view  ul.pager li a {
+	border-radius: 2px;
+    background: none repeat scroll 0 0 #FFFFFF;
+}
+
+.gallery-view  ul.pager .pager-current {
+	background: #9ad069;
+	color: #ffffff;
+}
+
+.gallery-view ul.pager li a:hover {
+	background: #535455;
+	color: #ffffff;
+}
+
+#pid-golf-gallery .content-group, #pid-banquets-weddings-gallery .content-group, #pid-restaurant-gallery  .content-group, *[id*='pid-gallery-'] .content-group {
+	background: none;
+}
+
+#pid-golf-gallery #sidebar-second, #pid-banquets-weddings-gallery #sidebar-second, #pid-restaurant-gallery #sidebar-second, *[id*='pid-gallery-'] #sidebar-second {
+		padding-top: 25px;
+}
+
+#pid-golf-gallery .breadcrumbs, #pid-banquets-weddings-gallery .breadcrumbs, #pid-restaurant-gallery  .breadcrumbs , *[id*='pid-gallery-'] .breadcrumbs{
+	display:none;
+	line-height: 0;
+	margin: 0;
+}
+
+#pid-golf-gallery #content-group-inner, #pid-banquets-weddings-gallery #content-group-inner, #pid-restaurant-gallery #content-group-inner, *[id*='pid-gallery-'] #content-group-inner{
+    padding: 0;
+}
+
+#pid-golf-gallery #block-system-main .gutter.inner, #pid-banquets-weddings-gallery #block-system-main .gutter.inner, #pid-restaurant-gallery  #block-system-main .gutter.inner, *[id*='pid-gallery-'] #block-system-main .gutter.inner, {
+	margin-left: 0;
+}
+
+#pid-golf-gallery h1.title.gutter, #pid-banquets-weddings-gallery h1.title.gutter, #pid-restaurant-gallery h1.title, *[id*='pid-gallery-'] h1.title {
+    background: none;
+	color: #ffffff;
+    padding: 2px 0 0;
+	margin: 0;
+	text-shadow: 0 1px 3px #232323;
+	line-height: 23px;
+}
+
+#onlinett {
+	box-shadow: 0 2px 4px #d1d1d1;
+	border-radius: 6px 6px 6px 6px;
+	padding: 20px 0 0 0;
+	background: #ffffff;
+}
+
+.ott-iframe #onlinett .titleBar {
+    color: #FFFFFF;
+    font-size: 12px;
+    background-color: #CCCCCC;
+    border: thin solid #CCCCCC;
+    font-size: 12px;
+    width: 100%;
+}
+
+/* --- ONLINE SCORECARD ----------------------------------------------------------- */
+
+#pid-golf-online-scorecard-front-nine .breadcrumbs, #pid-golf-online-scorecard-backnine .breadcrumbs, #pid-golf-online-scorecard .breadcrumbs {
+	display: none;
+	margin: 0;
+}
+
+#pid-golf-online-scorecard-front-nine .breadcrumbs a, #pid-golf-online-scorecard-back-nine .breadcrumbs a, #pid-golf-online-scorecard .breadcrumbs a {
+	line-height: 0;
+}
+
+#pid-golf-online-scorecard-front-nine .breadcrumbs.block, #pid-golf-online-scorecard-back-nine #breadcrumbs.block, #pid-golf-online-scorecard .breadcrumbs.block {
+    line-height: 0;
+    margin: 0;
+	display: none;
+}
+
+#pid-golf-online-scorecard-front-nine #content-group-inner, #pid-golf-online-scorecard-back-nine #content-group-inner, #pid-golf-online-scorecard #content-group-inner {
+	padding: 0;
+}
+
+
+#pid-golf-online-scorecard-front-nine #block-system-main .gutter, #pid-golf-online-scorecard-back-nine #block-system-main .gutter, #pid-golf-online-scorecard #block-system-main .gutter {
+	margin-left: 0;
+}
+
+d-golf-online-tee-time .breadcrumbs, #pid-golf-online-tee-time .breadcrumbs a, #pid-golf-online-tee-time .breadcrumbs.block {
+	display: none;
+	margin: 0;
+}
+
+#pid-golf-online-tee-time .content-group {
+	background:none;
+	width:100%;
+}
+#pid-golf-online-tee-time #content {
+	width:100%;
+}/* --- ONLINE TEE TIME ----------------------------------------------------------- */
+
+#pid-golf-online-tee-time .breadcrumbs, #pid-golf-online-scorecard-backnine .breadcrumbs, #pid-golf-online-scorecard .breadcrumbs {
+	display: none;
+	margin: 0;
+}
+
+#pid-golf-online-tee-time .breadcrumbs a, #pid-golf-online-scorecard-back-nine .breadcrumbs a, #pid-golf-online-scorecard .breadcrumbs a {
+	line-height: 0;
+}
+
+#pid-golf-online-tee-time .breadcrumbs.block, #pid-golf-online-scorecard-back-nine #breadcrumbs.block, #pid-golf-online-scorecard .breadcrumbs.block {
+    line-height: 0;
+    margin: 0;
+	display: none;
+}
+
+#pid-golf-online-tee-time #content-group-inner, #pid-golf-online-scorecard-back-nine #content-group-inner, #pid-golf-online-scorecard #content-group-inner {
+	padding: 0;
+}
+
+
+#pid-golf-online-tee-time #block-system-main .gutter, #pid-golf-online-scorecard-back-nine #block-system-main .gutter, #pid-golf-online-scorecard #block-system-main .gutter {
+	margin-left: 0;
+}
+
+
+
+

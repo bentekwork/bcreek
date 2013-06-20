@@ -1,0 +1,4 @@
+name=  Boulder Custom Module
+description = Custom functionality for Boulder Creek
+package = "Boulder Creek"
+core = 7.x

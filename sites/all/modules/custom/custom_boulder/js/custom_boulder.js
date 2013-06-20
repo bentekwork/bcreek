@@ -13,10 +13,12 @@
 		thumbs.click(function() {
 			// Get position of current image
 			preview_pos = preview_els.eq( thumbs.index( this) ).position();
-
+			
 			// Animate them!
 			outer.stop().animate( {'scrollLeft' : preview_pos.left},	500 );
 			arrow.stop().animate( {'left' : $(this).position().left },	500 );
+			toggle_rating('scroll');
+			
 		});
 
 		// Reset positions on load
@@ -27,17 +29,22 @@
 		$("#preview_inner").css('width', preview_els.length * image_width);
 		
 		$('#show_rating').click(function(){
-			var ratings = $('.ratings');
-			if(ratings.is(':visible')){
-				ratings.hide();
-				$(this).text('SHOW RATINGS');
-			} else {
-				ratings.show();
-				$(this).text('HIDE RATINGS');
-				
-			}
+			toggle_rating('none');
 			return false;
 		})
 		
 	});
+	
+	function toggle_rating(status){
+		
+		var ratings = $('.ratings');
+		if(ratings.is(':visible') || status == 'scroll'){
+			ratings.hide();
+			$(this).text('SHOW RATINGS');
+		} else {
+			ratings.show();
+			$(this).text('HIDE RATINGS');
+		}
+	}
+	
 }(jQuery));

@@ -25,5 +25,19 @@
 
 		// Set initial width
 		$("#preview_inner").css('width', preview_els.length * image_width);
+		
+		$('#show_rating').click(function(){
+			var ratings = $('.ratings');
+			if(ratings.is(':visible')){
+				ratings.hide();
+				$(this).text('SHOW RATINGS');
+			} else {
+				ratings.show();
+				$(this).text('HIDE RATINGS');
+				
+			}
+			return false;
+		})
+		
 	});
 }(jQuery));

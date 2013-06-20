@@ -25,9 +25,10 @@ margin:0;
 	border:1px solid #AAAAAA;
 	height:250px;
 	margin:0 auto;
-    padding: 10px 12px 12px;
+  padding: 10px 12px 12px;
 	width:770px;
-    box-shadow: 0 3px 20px #232323;
+  box-shadow: 0 3px 20px #232323;
+  position:relative;
 }
 
 #preview_outer {
@@ -160,7 +161,16 @@ padding:0px;
     top: 140px;
     width: 50px;
 }
-
+.handicap {
+	border: 1px solid #D1D1D1;
+	border-radius: 2px 2px 2px 2px;
+	position: absolute;
+	right: -1px;
+	text-align: center;
+	top: 167px;
+	width: 78px;
+	font-size: 12px;
+}
 .scorecard span img {
 	border: 1px solid #f9f9f9;
 	box-shadow: 0 2px 3px #d1d1d1;
@@ -205,11 +215,28 @@ padding:0px;
 	color: #ffffff;
 }
 
-
-
-
-
-
+.ratings {
+background: #fff;
+position: absolute;
+top: 34px;
+right: 0px;
+z-index: 1000;
+width: 300px;
+padding: 20px;
+display:none;
+}
+.ratings .gender td{
+	font-size:15px;
+}
+.ratings td{
+	text-align:center;
+}
+.ratings td:nth-child(2) {
+	border-right:1px solid #ccc;
+}
+.ratings .gender td:nth-child(2) {
+	border:none;
+}
 
 
 
